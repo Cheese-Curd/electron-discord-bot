@@ -2,14 +2,44 @@
 <html>
   <head>
     <title>Discord Electron Bot</title>
+    <link id="theme-link" rel="stylesheet" href="theme-light.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <input maxlength="2000"></input>
-    <button id="sendBtn">Send</button> 
-    <button id="setChannelBtn">Set Channel</button>
+    <h2 style="font-family: 'Noto Sans', sans-serif; font-weight: 700;" align=center>Discord Electron Bot</h2>
+    <h4 style="font-family: 'Noto Sans', sans-serif;" align=center>This is a Discord Bot that is run off a Electron Application</h4>
+    
+    <input style="font-family: 'Noto Sans', sans-serif;" maxlength="2000"></input>
+    <button style="font-family: 'Noto Sans', sans-serif;" id="sendBtn">Send</button> 
+    <button style="font-family: 'Noto Sans', sans-serif;" id="setChannelBtn">Set Channel</button>
+    <button style="font-family: 'Noto Sans', sans-serif;" id="sendEmbedBtn">Send Embed</button>
+     <button style="font-family: 'Noto Sans', sans-serif;" id="setstatus">Set Status</button>
+    <br>
+    
+    <p style="font-family: 'Noto Sans', sans-serif; font-weight: 700;">Embed Message Settings</p><br>
+    <input type="checkbox" id='ets'></input>
+    <label for='ets' style="font-family: 'Noto Sans', sans-serif;">Time Stamp</label><br>
+    <input type="checkbox" id='ectoggle'></input>
+    <label for='ectoggle' style="font-family: 'Noto Sans', sans-serif;">Toggle Color</label><br>
+    <input type="color" id="ecolor" style="display: none;"
+           value="#000000">
+    <label id="eclabel" for="ecolor" style="font-family: 'Noto Sans', sans-serif; display: none;">Color</label>
+    <br>
+    <p style="font-family: 'Noto Sans', sans-serif; font-weight: 700;">Status Settings</p><br>
+    <input type="checkbox" id='waitings'></input>
+    <label for='waitings' style="font-family: 'Noto Sans', sans-serif;">"Watching " Status Type</label><br>
+    <input type="checkbox" id='playings'></input>
+    <label for='playings' style="font-family: 'Noto Sans', sans-serif;">"Playing " Status Type</label>
+
+    <br><br>
+    <p style="font-family: 'Noto Sans', sans-serif; font-weight: 700;">Themes</p>
+    <button id="ltheme">Light Theme</button><br>
+    <button id="dtheme">Dark Theme</button><br>
+    <button id="htheme">Hacker Theme</button><br>
+    <button id="dotheme">Dark Theme (OLD)</button><br>
   </body>
-  <style>
-    input, body, button { background: black; color: white; }
-  </style>
+
   <script src="renderer.js"></script>
 </html>
